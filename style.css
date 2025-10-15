@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 79vh;
-    background: url(71.jpg);
+    background: url(images/71.jpg);
 
 }
 
@@ -58,7 +58,78 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: ;
     margin-left: 10px;
     padding: 8px;
+    border-radius: 50rem;
+    color: aliceblue;
+    font-size: 1.1rem;
+    background: rgba(255, 194, 209, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    transition: all 0.2 ease;
+}
+
+.input-area button:hover {
+    transform: scale(1.1);
+    background:#0a64ff5f ;
+}
+
+.todos-container {
+    display:flex ;
+    align-items: center;
+    justify-content: center;
 
 }
+
+#task-list li {
+    width: 100%;
+    align-content: center;
+    justify-content: space-between;
+    align-items: none;
+    margin-bottom: 10px;
+    padding: 8px 10px ;
+    border-radius: 33pc;
+    font-size: 1.2rem;
+    color: #ffffff;
+    position: relative;
+    transform: box-shadow 0.2 ease;
+
+}
+
+#task-list {
+    box-shadow: 0 0 10px ;
+
+}
+
+#task-list li .checkbox {
+    min-height: 20px;
+    height: 20px;
+    border: 2px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2 ease;
+
+}
+
+#task-list li .checkbox:checked {
+    background: #1772dbb3;
+    transform: scale(1.1);
+        border-radius: 50rem;
+
+}
+
+#task-list li .checkbox:checked::before {
+    content: '\2731';
+    color: #ffffff;
+    display: flex;
+    justify-content:center ;
+    border-radius: 50rem;
+    align-items: center;
+    font-size: 1rem;
+
+
+
+}
+

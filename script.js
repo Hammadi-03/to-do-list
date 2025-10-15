@@ -5,6 +5,14 @@ const taskInput = document.getElementById
  ('add-task-btn');
  const taskList = document.getElementById
  ('task-list');
+ const emptyImage = document.querySelector('.empty-image');
+
+
+ const toggleEmptyState = () => {
+    emptyImage.style.display = taskList.children.length === 0 ? 'block' : 'none';
+ };
+ 
+
 
 
 const addTask = (event)  => {
@@ -15,10 +23,16 @@ const addTask = (event)  => {
 
     }
     const li = document.createElement('li');
-    li.textContent = taskText;
+    li.innerHTML = `
+    <input type="checkbox" class="checkbox">
+    <span>${taskText}</span>
+    `;
+
+
     taskList.appendChild(li);
     console.log(taskText);
     taskInput.value = '';
+    toggleEmptyState();
 };
 
 addTaskBtn.addEventListener('click', addTask);
